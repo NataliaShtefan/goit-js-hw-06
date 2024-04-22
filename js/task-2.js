@@ -13,8 +13,9 @@ return this.#item
 }
 
 removeItem(itemToRemove) {
-    if (this.#item.includes(itemToRemove)) {
-        this.#item.splice(itemToRemove, 1)
+    const index = this.#item.indexOf(itemToRemove);
+    if ( index !== -1) {
+        this.#item.splice(index, 1)
     }
 }
 
